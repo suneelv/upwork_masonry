@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/" render={() => <AllTiles tiles={tiles} />} />
         <Route
           exact
-          path="/:id"
+          path="/open/:id"
           render={({ match: { params } }) => (
             <SingleTile id={params.id} tiles={tiles} />
           )}

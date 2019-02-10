@@ -29,7 +29,7 @@ const AllTiles = ({ tiles }) => {
 const SingleTile = ({ id, height, color }) => {
   return (
     <li className="tileList__item" style={{ height, backgroundColor: color }}>
-      <Link to={`/${id}`} />
+      <Link to={`/open/${id}`} className="tileLink" />
     </li>
   );
 };

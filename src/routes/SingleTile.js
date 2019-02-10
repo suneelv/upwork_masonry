@@ -1,5 +1,6 @@
 // @ts-check
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleTile = ({ id, tiles = [] }) => {
   const tile = tiles.find(tile => tile.id === id);
@@ -20,7 +21,7 @@ const SingleTile = ({ id, tiles = [] }) => {
         className="singleTileRoute"
         style={{ backgroundColor: tile.color, width: "100vw", height: "100vh" }}
       >
-        Single Title
+        <Link to="/" className="tileLink" />
       </div>
     );
   }

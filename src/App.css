@@ -23,12 +23,6 @@
   list-style-type: none;
 }
 
-.tileList .tileList__item a {
-  display: block;
-  width: 100%;
-  min-height: 100%;
-}
-
 .singleTileRoute {
   position: fixed;
   left: 0;
@@ -37,4 +31,10 @@
   bottom: 0;
   width: 100%;
   height: 100%;
+}
+
+.tileLink {
+  display: block;
+  width: 100%;
+  min-height: 100%;
 }
