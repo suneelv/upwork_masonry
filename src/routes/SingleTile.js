@@ -1,6 +1,6 @@
 // @ts-check
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 const SingleTile = ({ id, tiles = [] }) => {
   const tile = tiles.find(tile => tile.id === id);
@@ -14,10 +14,17 @@ const SingleTile = ({ id, tiles = [] }) => {
   });
 
   if (!tile) {
-    return null;
+    return (
+      <Redirect
+        to={{
+          pathname: "/"
+        }}
+      />
+    );
   } else {
     return (
       <div
+        data-testid="tile-element"
         className="singleTileRoute"
         style={{ backgroundColor: tile.color, width: "100vw", height: "100vh" }}
       >
